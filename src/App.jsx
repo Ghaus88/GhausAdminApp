@@ -5,6 +5,7 @@ import Single from './pages/single/Single';
 import New from './pages/new/New';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/layout/Layout';
+import { productInputs, userInputs } from '../formSource';
 
 function App() {
   const router = createBrowserRouter([
@@ -33,7 +34,7 @@ function App() {
             },
             {
               path: 'new',
-              element: <New />,
+              element: <New inputs={userInputs} title="Add New User" />,
             },
           ],
         },
@@ -50,7 +51,7 @@ function App() {
             },
             {
               path: 'new',
-              element: <New />,
+              element: <New inputs={productInputs} title="Add New Product" />,
             },
           ],
         },
